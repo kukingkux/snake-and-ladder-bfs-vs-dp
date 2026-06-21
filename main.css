@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #1f1f1f;
+    font-family: "Inter", sans-serif;
+}
+
+.desktop {
+    background: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bg-light {
+    background-color: #f1f1f1;
+    padding-bottom: 24px;
+}
+
+.simulation-container {
+    display: flex !important;
+    gap: 32px;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    padding-top: 64px;
+    padding-left: 92px;
+    position: relative;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.d-flex {
+    display: flex !important;
+    gap: 32px;
+}
+
+.d-flex-dir {
+    flex-direction: column;
+}
+
+.title {
+    left: 64px;
+    top: 64px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}
+
+.board {
+    position: relative;
+    background: #575757;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: black;
+}
+
+.player {
+    background: #ffffff !important;
+    color: #1f1f1f !important;
+}
+
+.board .row:nth-child(odd) .cell:nth-child(odd) {
+    background: #d9d9d9;
+}
+
+.board .row:nth-child(odd) .cell:nth-child(even) {
+    background: #3594ac;
+}
+
+.board .row:nth-child(even) .cell:nth-child(odd) {
+    background: #3594ac;
+}
+
+.board .row:nth-child(even) .cell:nth-child(even) {
+    background: #d9d9d9;
+}
+
+.sidebar {
+    width: 298px;
+    height: 100vh;
+    background: #2e2e2e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 32px;
+    box-sizing: border-box;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.control-title {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.btn-randomize {
+    width: 100%;
+    padding: 12px 0;
+    background: linear-gradient(to left, #72cc28, #779639);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.09);
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.input-group label {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    margin: 0;
+}
+
+.input-field {
+    height: 43px;
+    background: #484848;
+    border-radius: 8px;
+    border: none;
+    padding-left: 16px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #7b7b7b;
+    width: 100%;
+}
+
+.buttons-run {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.index-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.index-title {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    padding-left: 24px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.index-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 24px;
+    height: 28px;
+    width: 258px;
+}
+
+.color-box {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.snake-color {
+    background: #e6a458;
+}
+
+.ladder-color {
+    background: #b8de99;
+}
+
+.index-item span {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+}
+
+.btn-iterative {
+    width: 100%;
+    padding: 12px 0;
+    background: linear-gradient(to bottom, #e6a458, #db7a0a);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.09);
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn-recursive {
+    width: 100%;
+    padding: 12px 0;
+    background: linear-gradient(to bottom, #5e15cc, #390883);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.09);
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn-visualize {
+    width: 100%;
+    padding: 12px 0;
+    background: linear-gradient(to left, #72cc28, #779639);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.09);
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn-reset {
+    width: 100%;
+    padding: 12px 0;
+    background: linear-gradient(to left, #cbccca, #909684);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.09);
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.results {
+    color: #1f1f1f;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.chart {
+    margin-top: 20px;
+    max-width: 100%;
+    height: 250px !important;
+}
+
+.section-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0px !important;
+}
+
+.table-title {
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 16px;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.results-table th,
+.results-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.results-table th {
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
+
+.results-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
