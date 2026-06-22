@@ -1,70 +1,94 @@
-<!DOCTYPE html>
+<!-- 1. Keishin Naufa Alfaridzhi (103112400061)
+2. Dafa Awal Wahyu Pambudi (103112400275)
+3. Elfan Endriyanto (103112430040)
+4. Abisar Fathir (103112400068)
+5. Ariel Ahnaf Kusuma (103112400050) -->
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="main.css" />
-        <title>Simulation - Ladder Snake</title>
-    </head>
-    <body>
-        <div class="desktop">
-            <div class="container">
-                <div class="simulation-container">
-                    <h1 class="title">Simulation - Ladder Snake</h1>
-                    <div class="d-flex">
-                        <div class="board" id="board"></div>
-                        <div class="d-flex d-flex-dir bg-light" style="width: 800px">
-                            <canvas id="performanceChart" class="chart"></canvas>
-                            <div class="section-table">
-                                <div id="table-title" class="table-title"></div>
-                                <table id="results-table" class="results-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Input Size</th>
-                                            <th>Iterative (ms)</th>
-                                            <th>Recursive (ms)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody></tbody>
-                                </table>
-                                <div id="results" class="results"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar">
-                    <h2 class="control-title">Control Panel</h2>
-                    <div class="button-group">
-                        <button class="btn-visualize" id="start-visualization">Start Visualization</button>
-                        <button class="btn-visualize" id="reset-chart">Reset Chart</button>
-                    </div>
-                    <div class="inputs">
-                        <div class="input-group">
-                            <label for="simulation-runs">Input Size</label>
-                            <input type="number" id="simulation-runs" class="input-field" placeholder="10" value="10" />
-                            <label for="k-runs">K (Loop)</label>
-                            <input type="number" id="k-runs" class="input-field" placeholder="5" value="5" min="1" />
-                        </div>
-                    </div>
-                    <div class="buttons-run">
-                        <button class="btn-iterative" id="run-iterative">Run Iterative</button>
-                        <button class="btn-recursive" id="run-recursive">Run Recursive</button>
-                    </div>
-                    <div class="index-section">
-                        <div class="index-title">Tiles Index</div>
-                        <div class="index-item">
-                            <div class="color-box snake-color"></div>
-                            <span>Snake</span>
-                        </div>
-                        <div class="index-item">
-                            <div class="color-box ladder-color"></div>
-                            <span>Ladder</span>
-                        </div>
-                    </div>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Simulation - Ladder Snake</title>
+  </head>
+  <body>
+    <div class="desktop">
+      <div class="container">
+        <div class="simulation-container">
+          <h1 class="title">Simulation - Ladder Snake</h1>
+          <div class="d-flex">
+            <div class="board" id="board"></div>
+            <div class="d-flex d-flex-dir bg-light" style="width: 800px">
+              <canvas id="performanceChart" class="chart"></canvas>
+              <div class="section-table">
+                <div id="table-title" class="table-title"></div>
+                <table id="results-table" class="results-table">
+                  <thead>
+                    <tr>
+                      <th>Input Size</th>
+                      <th>Iterative (ms)</th>
+                      <th>Recursive (ms)</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <div id="results" class="results"></div>
+              </div>
             </div>
+          </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="main.js"></script>
-    </body>
+        <div class="sidebar">
+          <h2 class="control-title">Control Panel</h2>
+          <div class="button-group">
+            <button class="btn-visualize" id="start-visualization">
+              Start Visualization
+            </button>
+            <button class="btn-visualize" id="reset-chart">Reset Chart</button>
+          </div>
+          <div class="inputs">
+            <div class="input-group">
+              <label for="simulation-runs">Input Size</label>
+              <input
+                type="number"
+                id="simulation-runs"
+                class="input-field"
+                placeholder="10"
+                value="10"
+              />
+              <label for="k-runs">K (Loop)</label>
+              <input
+                type="number"
+                id="k-runs"
+                class="input-field"
+                placeholder="5"
+                value="5"
+                min="1"
+              />
+            </div>
+          </div>
+          <div class="buttons-run">
+            <button class="btn-iterative" id="run-iterative">
+              Run Iterative
+            </button>
+            <button class="btn-recursive" id="run-recursive">
+              Run Recursive
+            </button>
+          </div>
+          <div class="index-section">
+            <div class="index-title">Tiles Index</div>
+            <div class="index-item">
+              <div class="color-box snake-color"></div>
+              <span>Snake</span>
+            </div>
+            <div class="index-item">
+              <div class="color-box ladder-color"></div>
+              <span>Ladder</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
